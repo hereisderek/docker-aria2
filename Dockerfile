@@ -1,8 +1,8 @@
-FROM lsiobase/alpine:3.8
+FROM lsiobase/alpine:3.10
 
 # set label
 LABEL maintainer="NG6"
-ENV TZ=Asia/Shanghai UpdateTracker=true SECRET=yourtoken CACHE=128M
+ENV TZ=Asia/Shanghai UpdateTracker=true SECRET=yourtoken CACHE=128M QUIET=true
 
 # arg
 ARG aria2c_v=1.35.0
