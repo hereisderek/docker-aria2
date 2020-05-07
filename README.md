@@ -183,6 +183,7 @@ docker create \
   -e CACHE=512M \
   -e UpdateTracker=true \
   -e QUIET=true \
+  -e RECYCLE=true \
   -p 6881:6881 \
   -p 6881:6881/udp \
   -p 6800:6800 \
@@ -206,6 +207,8 @@ services:
       - CACHE=512M
       - UpdateTracker=true
       - QUIET=true
+      - RECYCLE=true
+      - MOVE=true
     volumes:
       - /path/to/appdata/config:/config
       - /path/to/downloads:/downloads
